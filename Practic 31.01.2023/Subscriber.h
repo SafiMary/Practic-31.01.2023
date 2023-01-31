@@ -13,5 +13,6 @@ public:
 private:
 	size_t _ID;
 	std::string _nameSubsriber;
+	std::string _wantedBookName;
 };
 

@@ -15,6 +15,6 @@ void Subscriber::setID(size_t ID) {
 }
 
 Subscriber::~Subscriber(){}
-void wantedBook() {
-
+void Subscriber::wantedBook() {
+	return _wantedBookName;
 }
