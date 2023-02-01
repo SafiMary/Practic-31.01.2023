@@ -1,18 +1,20 @@
 #pragma once
 #include "ILibrary.h"
 
+static int ID_SUBSCRIBER = 0;
+
 class Subscriber{
 public:
-	Subscriber(size_t ID, std::string& nameSubsriber);
-	const std::string getNameSubsriber();
-	void setNameSubsriber(const std::string& nameSubsriber);
-	size_t getID();
-	void setID(size_t ID);
-	void wantedBook();
-	~Subscriber();
+	Subscriber(const std::string& name, const std::string& bookWanted);
+	const std::string& getName()const;
+	const std::string& getBookWanted()const;
+	int getId()const;
+
+	void setName(const std::string& name);
+	void setBookWanted(const std::string& bookWanted);
 private:
-	size_t _ID;
-	std::string _nameSubsriber;
-	std::string _wantedBookName;
+	std::string _name;
+	std::string _bookWanted;
+	int _id;
 };
 

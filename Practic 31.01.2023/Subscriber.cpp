@@ -1,20 +1,22 @@
 #include "Subscriber.h"
 
-Subscriber::Subscriber(size_t ID, std::string& nameSubsriber): _ID(ID), _nameSubsriber(nameSubsriber){}
-const std::string Subscriber::getNameSubsriber() {
-	return _nameSubsriber;
+Subscriber::Subscriber(const std::string& name, const std::string& bookWanted) : _name(name), _bookWanted(bookWanted), _id(ID_SUBSCRIBER) { ID_SUBSCRIBER++; }
+
+
+const std::string& Subscriber::getName() const{
+	return _name;
 }
-void Subscriber::setNameSubsriber(const std::string& nameSubsriber) {
-	_nameSubsriber = nameSubsriber;
+const std::string& Subscriber::getBookWanted()const {
+	return _bookWanted;
 }
-size_t Subscriber::getID() {
-	return _ID;
-}
-void Subscriber::setID(size_t ID) {
-	_ID = ID;
+ int Subscriber::getId()const {
+	return _id;
 }
 
-Subscriber::~Subscriber(){}
-void Subscriber::wantedBook() {
-	return _wantedBookName;
+void Subscriber::setName(const std::string& name) {
+	_name = name;
+}
+
+void Subscriber::setBookWanted(const std::string& bookWanted) {
+	_bookWanted = bookWanted;
 }
